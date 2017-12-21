@@ -282,12 +282,6 @@ body
 
   }
 
-  .header .arrow
-  {
-    left: calc(50% - 12px);
-    top: 80%;
-  }
-
   .header .marg 
   {
     padding-top: 20px;
