@@ -465,7 +465,6 @@ body
   width: 250px;
   top: 3vh;
   left : 8vw;
-  border: white solid 1px;
 }
 
 .alti
@@ -481,4 +480,11 @@ body
 {
   font-weight: bold;
   font-size: 25px;
+}
+
+.return{
+  margin-top:5vh;
+  margin-left: 3vw;
+  width: 2%;
+  height: 1%;
 }
