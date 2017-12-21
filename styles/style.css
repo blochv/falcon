@@ -1,0 +1,494 @@
+/************* 
+  INIT
+*************/
+@font-face {
+    font-family: 'Bank Gothic';
+    src: url('../ressources/BankGothicBT-Light.woff2') format('woff2'),
+        url('../ressources/BankGothicBT-Light.woff') format('woff'),
+        url('../ressources/BankGothicBT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body
+{ 
+  width: 100%;
+  font-family: 'Bank Gothic';
+}
+
+::selection { /* effet souris  */
+    background: rgb(255, 176, 176); 
+    color: color;
+}
+
+.red{
+  color : #FF8181;
+}
+
+/****************************************************
+                   HEADER
+*****************************************************/
+.header{
+  text-align: center;
+  background:url(../images/background.jpg) no-repeat center;
+  background-size: 100%;
+  background-size: cover;
+  height: 700px;
+}
+
+.logo
+{
+  position: absolute;
+  width: 250px;
+  top: 3vh;
+  left : 8vw;
+  opacity: 0;
+
+  animation: logo 1.4s 2.7s ease forwards;
+}
+
+.header .feature-left-horiz
+{
+  position: absolute;
+  height: 1px;
+  width: 10%;
+  background: #fff;
+  left: 0;
+  top: 55px;
+  opacity: 0;
+
+  animation: arrived-horiz 1s 0.6s ease forwards;
+  transform-origin: 0 0;
+}
+
+.header .feature-right-horiz
+{
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  background: #fff;
+  right: 0;
+  top: 212px;
+  opacity: 0;
+  
+  transform-origin: 100% 100%;
+  animation: arrived-horiz 1s 0.6s ease forwards;
+}
+
+.header .marg
+{
+  padding-top: 200px;
+
+}
+
+.header .subtitle
+{
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  opacity: 0;
+
+  animation: margTop 1s 1.3s ease forwards;
+}
+
+.header .infoSite
+{
+  width: 300px;
+  margin : 140px calc(50% - 150px);
+  text-align: right;
+  color: #fff;
+  opacity: 0;
+
+  animation: margBottom 1s 2s ease forwards;
+}
+
+.header .title-page
+{
+  font-size: 55px;
+  color: #fff;
+  position: absolute;
+  left: 7%;
+  opacity: 0;
+
+  animation: title 1.4s 2.3s ease forwards;
+}
+
+
+.header .feature-left-verti
+{
+  position: absolute;
+  height: 80%;
+  width: 1px;
+  background: #fff;
+  left: 5%;
+  top: 55px;
+  opacity: 0;
+
+  animation: arrived-verti 1s 1.2s ease forwards;
+  transform-origin: 0 0;
+}
+
+.header .feature-right-verti
+{
+  position: absolute;
+  height: 33%;
+  width: 1px;
+  background: #fff;
+  left: 65%;
+  top: 212px;
+  opacity: 0;
+
+  animation: arrived-verti 1s 1.2s ease forwards;
+  transform-origin: 0 0;
+}
+
+.header .arrow
+{
+  position: absolute;
+  width: 25px;
+  bottom: 3%;
+  left: calc(50% - 12px);
+  opacity : 0;
+  animation: bounce 3s 3s ease infinite;
+}
+
+  /* KEYFRAMES HOME */
+@keyframes logo
+{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes title
+{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes margTop
+{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes margBottom
+{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes bounce
+{
+  0%{opacity: 0;}
+  50%{transform: translateY(10px); opacity:1;}
+}
+
+@keyframes arrived-verti
+{
+  0%{transform: scaleY(0); opacity:1;}
+  100%{transform: scaleY(1); opacity:1;}
+}
+
+@keyframes arrived-horiz
+{
+  0%{transform: scaleX(0); opacity:1;}
+  100%{transform: scaleX(1); opacity:1;}
+}
+
+
+/****************************************************
+                   RESPONSIVE
+*****************************************************/
+/*MOBILE*/
+@media screen and (min-width:320px) and (max-width:500px)
+{
+  /**** HEADER ***/
+  .header .subtitle
+  {
+    margin-top : 155px;
+    font-size: 23px;
+  }
+
+  .header .feature-right-verti
+  {
+    left: 95%;
+    height: 30%;
+    top: 165px;
+  }
+
+  .header .infoSite
+  {
+    margin : 100px calc(50% - 150px);
+  }
+
+  .header .marg
+{
+  padding-top: 1px;
+}
+
+  .header .feature-right-horiz
+  {
+    top: 165px;
+    width:30%;
+  }
+
+  .header .title-page
+  {
+    font-size: 45px;
+    text-align: left;
+  }
+
+  .header .arrow
+  {
+    left: calc(50% - 12px);
+    bottom: 6%;
+  }
+}
+
+ /* TABLETTE */
+@media screen and (min-width:501px) and (max-width:1025px)
+{
+  /**** HEADER ***/
+  .header .subtitle
+  {
+    margin-top : 155px;
+    font-size: 23px;
+  }
+
+  .header .feature-left-verti
+  {
+    height: 50%;
+  }
+  
+  .header .feature-right-verti
+  {
+    visibility: hidden;
+  }
+
+  .header .infoSite
+  {
+    margin : 100px calc(50% - 150px);
+  }
+
+  .header .feature-right-horiz
+  {
+    top: 165px;
+    width:30%;
+  }
+
+  .header .title-page
+  {
+    font-size: 45px;
+
+  }
+
+  .header .arrow
+  {
+    left: calc(50% - 12px);
+    top: 80%;
+  }
+
+  .header .marg 
+  {
+    padding-top: 20px;
+  }
+}
+
+
+/****************************************************
+                   SECOND PART
+*****************************************************/
+.bg-grad
+{
+ background: linear-gradient(to bottom, rgb(0, 0, 0), #123a65);
+ width: 100%;
+ padding-bottom: 100px;
+ height: auto;
+}
+
+.bg-grad .second
+{
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-grad .second .title-infoPart
+{
+  color: #fff;
+  font-size: 40px;
+  padding-top: 110px;
+  text-align: justify;
+}
+
+.bg-grad .second .more-infoPart
+{
+  padding-top: 50px;
+  padding-bottom: 70px;
+  font-size: 20px;
+  color: #fff;
+  text-align: justify;
+}
+
+/** RESPONSIVE **/
+@media screen and (min-width:320px) and (max-width:500px)
+{
+  .bg-grad .second
+  {
+    text-align: center;
+    width: 90%;
+  }
+
+  .bg-grad .second .title-infoPart
+  {
+    font-size: 25px;  
+    padding-top: 0;
+  }
+
+    .bg-grad .second .more-infoPart
+  {
+    font-size: 20px;  
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/****************************************************
+                   CAPSULE
+*****************************************************/
+/* .capsuleBloc
+{
+
+  width: 200px;
+  transform: rotate(-7deg);
+  margin: 300px calc(50% - 150px);
+  
+  animation: my-anim 5s ease infinite;
+} */
+
+/* @keyframes my-anim
+{
+  5%{ transform: translateX(15px) rotate(-12deg);}
+  10%{ transform: translateX(20px) rotate(-16deg);}
+  15%{ transform: translateX(15px) rotate(-13deg);}
+  70%{ transform: translateY(-120px) rotate(0deg) scale(0.5);}
+  100%{ transform: translateY(-180px) rotate(0deg) scale(0.3);}
+}  */
+
+
+/****************************************************
+                   ALTITUDE
+*****************************************************/
+
+/* .third
+{
+  height: 1000px;
+  width: auto;
+} */
+
+/* .altitude
+{
+  top: 10px;
+  left: 10px;
+  color: white;
+  display: none;
+  position: fixed;
+} */
+
+.experimente
+{
+  padding-bottom: 60px;
+  color: white;
+  font-size: 25px;
+}
+
+.start
+{
+  width: 100px;
+  height: 60px;
+  border: white solid 1px;
+  color: white;
+  padding: 20px 70px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.start:hover
+{
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+
+  transition: 0.5s;
+}
+
+/* .start::before
+{
+  background-color: white;
+  transition: 0.5s;
+} */
+/****************************************************
+                   SCROLL CONTROL
+*****************************************************/
+.timeline
+{
+  width: 100%;
+  height: 7px;
+  left: 0;
+  background: rgb(0, 0, 0);
+  bottom: 0%;
+  position: fixed;
+}
+
+.fillBar{
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+}
+
+/****************************************************
+                   
+                   
+                   
+                   
+                   PAGE ROCKET
+
+
+
+
+*****************************************************/
+.bg-rocket
+{
+ background: linear-gradient(to bottom, rgb(0, 0, 0), #1c446f);
+ width: 100%;
+ padding-bottom: 100px;
+ height: 3000px;
+}
+
+.logo-rocket
+{
+  position: fixed;
+  width: 250px;
+  top: 3vh;
+  left : 8vw;
+}
+
+.alti
+{
+  position: fixed;
+  color: white;
+  bottom: 5%;
+  left: 3%;
+  font-size: 20px;
+}
+
+.value
+{
+  font-weight: bold;
+  font-size: 25px;
+}
