@@ -45,6 +45,7 @@ body
   opacity: 0;
 
   animation: logo 1.4s 2.7s ease forwards;
+  will-change: opacity;
 }
 
 .header .feature-left-horiz
@@ -59,6 +60,7 @@ body
 
   animation: arrived-horiz 1s 0.6s ease forwards;
   transform-origin: 0 0;
+  will-change: transform, opacity;
 }
 
 .header .feature-right-horiz
@@ -73,6 +75,7 @@ body
   
   transform-origin: 100% 100%;
   animation: arrived-horiz 1s 0.6s ease forwards;
+  will-change: transform, opacity;
 }
 
 .header .marg
@@ -89,6 +92,7 @@ body
   opacity: 0;
 
   animation: margTop 1s 1.3s ease forwards;
+  will-change: transform, opacity;
 }
 
 .header .infoSite
@@ -100,6 +104,7 @@ body
   opacity: 0;
 
   animation: margBottom 1s 2s ease forwards;
+  will-change: transform, opacity;
 }
 
 .header .title-page
@@ -111,6 +116,7 @@ body
   opacity: 0;
 
   animation: title 1.4s 2.3s ease forwards;
+  will-change: transform, opacity;
 }
 
 
@@ -126,6 +132,7 @@ body
 
   animation: arrived-verti 1s 1.2s ease forwards;
   transform-origin: 0 0;
+  will-change: transform, opacity;
 }
 
 .header .feature-right-verti
@@ -139,18 +146,11 @@ body
   opacity: 0;
 
   animation: arrived-verti 1s 1.2s ease forwards;
-  transform-origin: 0 0;
+  transform-origin: 0 0;  
+  will-change: transform, opacity;
 }
 
-.header .arrow
-{
-  position: absolute;
-  width: 25px;
-  bottom: 3%;
-  left: calc(50% - 12px);
-  opacity : 0;
-  animation: bounce 3s 3s ease infinite;
-}
+
 
   /* KEYFRAMES HOME */
 @keyframes logo
@@ -238,11 +238,6 @@ body
     text-align: left;
   }
 
-  .header .arrow
-  {
-    left: calc(50% - 12px);
-    bottom: 6%;
-  }
 }
 
  /* TABLETTE */
@@ -452,10 +447,9 @@ body
   height: 25px;
 }
 
-/***********************************
-rocket
-***********************************/
-
+/*****************
+      rocket
+*****************/
 .block
 {
   position: fixed;
@@ -478,7 +472,25 @@ img{
   transform: translateX(-50%);
   opacity: 0;
 }
+
 input
 {
+  position: fixed;
+}
+
+.bg-rocket .scroll-down
+{
+  position: fixed;
+  width: 150px;
+  bottom: 7%;
+  right: 10%;
+  opacity : 0;
+  animation: bounce 2s ease infinite;
+}
+
+.bg-rocket .scroll-down .arrow
+{
+  width: 25px;
+  right: 0%;
   position: fixed;
 }
