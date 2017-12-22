@@ -54,10 +54,7 @@ window.addEventListener('scroll', () =>
 //Rocket
 
 const $rocket = document.querySelector('.rocket')
-const $block0 = $rocket.querySelector('.index-0')
 const $block1 = $rocket.querySelector('.index-1')
-const $block2 = $rocket.querySelector('.index-2')
-const $block3 = $rocket.querySelector('.index-3')
 
 const timeline = new TimelineMax()
 const timeline2 = new TimelineMax()
@@ -70,10 +67,7 @@ timeline.pause()
 timeline2.pause()
 
 //Mettre ici toutes les animations selon blocks, QUE ICI
-timeline.add(TweenLite.to($block0, 1, {opacity:1 }))
-timeline.add(TweenLite.to($block1, 1, {opacity:1 }))
-timeline.add(TweenLite.to($block2, 1, {opacity:1 }))
-timeline.add(TweenLite.to($block3, 1, {opacity:1 }))
+timeline.add(TweenLite.to($block1, 1, {opacity:1, yPercent: 100 }))
 
 
 // timeline.add()TweenLite.to()
