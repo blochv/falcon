@@ -51,5 +51,61 @@ window.addEventListener('scroll', () =>
     // $altitude.innerHTML = Math.round((position2 * 497))
 })
 
+//Rocket
+
+const $rocket = document.querySelector('.rocket')
+const $block1 = $rocket.querySelector('.index-1')
+const $block2 = $rocket.querySelector('.index-2')
+const $block3 = $rocket.querySelector('.index-3')
+const $block4 = $rocket.querySelector('.index-4')
+const $block0 = $rocket.querySelector('.index-0')
+
+const timeline = new TimelineMax()
+const timeline2 = new TimelineMax()
+window.timeline = timeline
+window.timeline2 = timeline2
+
+//Pour eviter que l'animation se lance solo au départ
+timeline.pause()
+timeline2.pause()
+
+//Mettre ici toutes les animations selon blocks, QUE ICI
+timeline.add(TweenLite.to($block1, 1, {opacity:1 }))
+timeline2.add(TweenLite.to($block0,  1, {opacity:1, yPercent: -40.2}))
+timeline.append(TweenLite.to($block1, 1, {scaleX: 0.5, scaleY: 0.5}))
+timeline2.append(TweenLite.to($block0, 1, {scaleX: 0.5, scaleY: 0.5, yPercent: -86}))
+
+// timeline.add()TweenLite.to()
+// timeline.add(TweenLite.to($block1, 1, {scaleX: 0.5, scaleY: 0.5}))
+// timeline.add(TweenLite.to($block1, 1, {scaleX: 0.5, scaleY: 0.5}))
+// timeline.add(TweenLite.to($block0, 1, {scaleX: 0.5, scaleY: 0.5}))
+// timeline2.add(TweenLite.to($block2, 1, {scaleX: 0.5, scaleY: 0.5, yPercent: -35}))
+// timeline2.add(TweenLite.to($block3, 1, {scaleX: 0.5, scaleY: 0.5, yPercent: -35 }))
+// timeline2.insert(TweenLite.to($block2, 1, {xPercent: 225, opacity: 1, scaleX: 0.5, scaleY: 0.5}))
+// timeline2.insert(TweenLite.to($block3, 1, {xPercent: -225, opacity:1, scaleX: 0.5, scaleY: 0.5}))
+// timeline2.add(TweenLite.to($block0, 1, {scaleX: 0.5, scaleY: 0.5, yPercent: -35}))
+// timeline.add(TweenLite.to($block0, 1, {scaleX: 0.5, scaleY: 0.5}))
+// timeline.add(TweenLite.to($block4, 1, {yPercent: -124.711, opacity:1, scaleX: 0.5, scaleY: 0.5}))
+
+window.addEventListener('scroll', () => 
+{
+    //Ne pas toucher, pour avoir position de la page selon scroll
+	const contHeight = $cont.clientHeight - window.innerHeight
+    const scrollPos = window.pageYOffset
+
+	position = (scrollPos / contHeight)
+    console.log(position)
+})
+
+
+const loop = () =>
+{
+    window.requestAnimationFrame(loop)
+    
+    //progression de la timeline selon le scroll
+    timeline.progress(position)
+    timeline2.progress(position)
+}
+window.requestAnimationFrame(loop)
 
 

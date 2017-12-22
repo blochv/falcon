@@ -489,3 +489,71 @@ body
   width: 25px;
   height: 25px;
 }
+
+/***********************************
+rocket
+***********************************/
+
+.block
+{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.index-1
+{
+    width: 20vw;
+    height: 50vh;
+    top: 0vw;
+    left: 50vw;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.index-0
+{
+    width: 26vw;
+    height: 50vh;
+    top: 32.5vw;
+    left: 50vw;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.index-2
+{
+    width: 20vw;
+    height: 50vh;
+    top: 20vw;
+    left: 0vw;
+    transform: translateX(-50%);
+    opacity: 0;    
+}
+.index-3
+{
+    width: 20vw;
+    height: 50vh;
+    top: 20vw;
+    left: 100vw;
+    transform: translateX(-50%);
+    opacity: 0;    
+}
+
+.index-4
+{
+    width: 20vw;
+    height: 50vh;
+    top: 50vw;
+    left: 50vw;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+input
+{
+    position: fixed;
+}
