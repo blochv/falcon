@@ -20,6 +20,8 @@ window.addEventListener('scroll', () =>
 
 	const valueInv = (position)
 	$value.innerHTML = Math.round(216000 - (position * 216000))
+
+
 })
 
 //Rocket
@@ -37,15 +39,6 @@ timeline.pause()
 
 //Change animation since the timeline
 timeline.add(TweenLite.to($block1, 1, {opacity:1, yPercent: 120 }))
-
-window.addEventListener('scroll', () => 
-{
-    //Page position during the timeline
-	const contHeight = $cont.clientHeight - window.innerHeight
-    const scrollPos = window.pageYOffset
-
-	position = (scrollPos / contHeight)
-})
 
 
 const loop = () =>
