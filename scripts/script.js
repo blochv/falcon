@@ -66,10 +66,6 @@ timeline.pause()
 //Mettre ici toutes les animations selon blocks, QUE ICI
 timeline.add(TweenLite.to($block1, 1, {opacity:1, yPercent: 100 }))
 
-if(MediaQueryList = true){
-	timeline.add(TweenLite.to($block1, 1, {opacity:1, yPercent: 150 }))	
-}
-
 // timeline.add()TweenLite.to()
 // timeline.add(TweenLite.to($block1, 1, {scaleX: 0.5, scaleY: 0.5}))
 // timeline.add(TweenLite.to($block1, 1, {scaleX: 0.5, scaleY: 0.5}))
