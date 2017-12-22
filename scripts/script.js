@@ -57,18 +57,17 @@ const $rocket = document.querySelector('.rocket')
 const $block1 = $rocket.querySelector('.index-1')
 
 const timeline = new TimelineMax()
-const timeline2 = new TimelineMax()
 
 window.timeline = timeline
-window.timeline2 = timeline2
 
 //Pour eviter que l'animation se lance solo au départ
 timeline.pause()
-timeline2.pause()
 
 //Mettre ici toutes les animations selon blocks, QUE ICI
 timeline.add(TweenLite.to($block1, 1, {opacity:1, yPercent: 100 }))
-
+if(MediaQueryList = true){
+	timeline.add(TweenLite.to($block1, 1, {opacity:1, yPercent: 150 }))	
+}
 
 // timeline.add()TweenLite.to()
 // timeline.add(TweenLite.to($block1, 1, {scaleX: 0.5, scaleY: 0.5}))
@@ -99,7 +98,6 @@ const loop = () =>
     
     //progression de la timeline selon le scroll
     timeline.progress(position)
-    timeline2.progress(position)
 }
 window.requestAnimationFrame(loop)
 

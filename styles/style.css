@@ -517,6 +517,17 @@ img{
   opacity: 0;
 }
 
+@media screen and (min-width: 260) and (max-width: 600){
+  .index-1
+  {
+    width: 5%;
+    height: 50%;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
 input
 {
   position: fixed;
